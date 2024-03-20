@@ -1,10 +1,10 @@
-# Introduction
-- creating using jframes
+# ☕️ Java Implementation of Graphics
+- creating using JFrames
 - was easier and more compatible to setup than the c project
 
-## Setting up 
+## ⚙️ Setting up 
 - setting up basic things
-    ### Imports list of imports
+    ### list of imports
     - List of all the imports:
     ```java
     import javax.swing.ImageIcon; //for image icon
@@ -34,11 +34,14 @@
     ```
 
     ### Giving Icon to the window [🔧Needs Work]
-    - Done with ImageIcon
+    - Done with creating an image Icon:
     - Need to [import](#imports-list-of-imports)
     - <span style="color:red"> **PROBLEM:**</span> Did not work on Fedora Linux. reference the [Problem](#imageicon-not-working-linux)
     ```java
     ImageIcon image = new ImageIcon("../NOTES/Resources/icon.png");
+    ```
+    - Then setting it to the frame:
+    ```java
     frame.setIconImage(image.getImage());
     ```
 
@@ -52,9 +55,43 @@
     frame.getContentPane().setBackground(new Color(131,139,167));
     ```
 
+## 🏷️ Labels
+- To insert Label to Frame
+    ### list of imports
+    - List of required imports:
+    ```java
+    import javax.swing.JLabel;
+    ```
 
+    ### Creating a Label Object
+    - Java Label Can be created with 
+    ```java
+    JLabel label = new JLabel();
+    ```
 
-## Problems
+    ### Setting Text to a Label Object
+    - Text can be set to label with either
+    ```java
+    label.setText("Hello World");
+    ```
+    - after object creation or at the time of object creation
+    ```java
+    JLabel label = new JLabel("Hello World");
+    ```
+    - <span style="color:green"> **NOTE:**</span> This will put the left to the y centered x left most position of the screen by default 
+
+    ### Adding Image Icon to a Label Object 
+    - To add the image to the label along, first [create an Image Icon](#giving-icon-to-the-window-🔧needs-work).  
+    - Then use the setIcon on the Label for it.
+    ```java
+    label.setIcon(image);
+    ```
+    | Output | <img src="./Resources/Label_seticon.png" alt="Label Set Icon Screen Shot" width="300"/>|
+    |----------------|----------------|
+
+&nbsp;
+
+## ❗️ Problems
 - List of all the problems that occured.
     ## Solved
     - List of solved problems

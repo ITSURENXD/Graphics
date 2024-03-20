@@ -15,6 +15,9 @@
 &nbsp;
 
 ### 👩‍💻 Platforms
-- Two Platforms Tested for ease:
+Two Platforms Tested for ease:
 1. [🅒 C](./NOTES/c.md)
 2. [☕️ Java](./NOTES/java.md)
+
+&nbsp;
+----

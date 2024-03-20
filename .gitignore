@@ -1,1 +1,9 @@
-/C/Cubespin.exe
+##Ignore all files of C Folder
+/C/*
+
+## With Exception of 
+## Sub Folder
+!/C/*/
+## C files
+!/C/*.c
+!/C/*/*.c
