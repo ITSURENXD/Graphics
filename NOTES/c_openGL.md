@@ -1,5 +1,5 @@
 # 🎮 OpenGL Implementation
-- The **[Code:📑](../C/OpenGL/test.c)**
+- The **[Code:📑](../C/OpenGL/test1.c)**
 
 &nbsp;
 
@@ -20,8 +20,8 @@
     sudo dnf install freeglut-devel
     ```
 
-    ### ▶️ Execution
+    ### ▶️ Execution Script
     - Executed with: (foo is the filename without the file extension)
     ```bash
-    gcc foo.c -o test -lGL -lGLU -lglut && ./foo
+    gcc test1.c -o test1 -lGL -lGLU -lglut && ./test1
     ```
