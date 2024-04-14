@@ -1,5 +1,5 @@
 # 🖼️ Graphics Header BGI Implementation (Basic)
-- The **[Code:📑](../C/Cubespin.c)**
+- The **[Code:📑](../C/Testing/Cubespin.cpp)**
 ### 🔧 Components List:
 1. **[Graphics Initializer](#graphics-initializer)**
 2. **[Delay](#delays)**
@@ -93,3 +93,11 @@ void drawer(float points[5][2]) {
     }
 }
 ```
+
+&nbsp;
+# 📤 Output
+- Ran using:
+```powershell
+g++ Cubespin.cpp -o Cubespin -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32
+```
+<img src='./Resources/CubeSpin.gif'>
