@@ -7,3 +7,5 @@
 ## C files
 !/C/*.c
 !/C/*/*.c
+!/C/*.cpp
+!/C/*/*.cpp

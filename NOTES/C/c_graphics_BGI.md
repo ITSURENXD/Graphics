@@ -1,5 +1,5 @@
 # 🖼️ Graphics Header BGI Implementation (Basic)
-- The **[Code:📑](../C/Testing/Cubespin.cpp)**
+- The **[Code:📑](../../C/Testing/Cubespin.cpp)**
 ### 🔧 Components List:
 1. **[Graphics Initializer](#graphics-initializer)**
 2. **[Delay](#delays)**
