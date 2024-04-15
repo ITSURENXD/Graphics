@@ -3,8 +3,18 @@
 - <img src='./Resources/DDA.svg' width="700px">
 - &emsp; &emsp; &emsp; &emsp;fig: for (2,2) to (7,5) 
 
+### ⬆️ Advantages
+1. Simplest Method as it involves only integer additions.
+2. Faster method for calculating pixels than the direct method.
+3. Eliminates Multiplication in the equations by making use of raster characteristics.
 
-### 🤖 **Algorithm**
+### ⬇️ Disadvantages
+1. Floating Point Arithmetic is still time consuming used internally like when calculating the increments.
+2. While Fast, the roud-off Errors make the line jagged.
+3. Rounding-off is time consuming still. 
+
+&nbsp;
+## 🤖 **Algorithm**
 1. Input the line endpoints and store the left endpiont in (x-initial,y-initial) and right in (x-final,y-final).
     ```c
     printf("Enter The Starting Coordinate: ");
