@@ -4,15 +4,13 @@
 #include <stdlib.h>
 #include "./Modules/Graphics.cpp"
 
-float rounder(float number) {return number+0.5;}
-
 void DDA(int x_initial, int y_initial, int x_final, int y_final) {
-    outtextxy(200,20,"DDA");
     float difference_x, difference_y, increment_x, increment_y, steps, x, y;
 
     // Setting Up The differences
     difference_x = x_final - x_initial;
     difference_y = y_final - y_initial;
+    printf("\n Diff x: %f y: %f", difference_x, difference_y);
 
     // Setting up the Steps
     if (abs(difference_x) > abs(difference_y)) {
@@ -20,18 +18,24 @@ void DDA(int x_initial, int y_initial, int x_final, int y_final) {
     } else {
         steps=abs(difference_y);
     }
+    printf("\n Steps: %f",steps);
 
     // Settting up the Increments
     increment_x=difference_x/steps;
     increment_y=difference_y/steps;
+    printf("\n Increments x: %f y: %f", increment_x, increment_y);
 
     // Actual working
     x=x_initial, y=y_initial;
+    graphicsinits();
+    outtextxy(200, 20, "DDA"); 
+    putpixel(round(x),round(y),WHITE);
     for (int i=0; i<steps;i++) {
         delay(5);
         y+=increment_y;
         x+=increment_x;
-        putpixel(rounder(x),rounder(y),WHITE);
+        printf("\n Plot Values: x: %f y: %f", round(x), round(y));
+        putpixel(round(x),round(y),WHITE);
     }
 
     // Labeling
@@ -40,10 +44,9 @@ void DDA(int x_initial, int y_initial, int x_final, int y_final) {
 }
 
 int main() {
-    graphicsinits();
     system("cls");
-
     int x_intial,y_initial,x_final,y_final;
+
     //Gettting Inputs
     printf("Enter The Starting Coordinate: ");
     scanf("%d %d", &x_intial, &y_initial);
@@ -52,4 +55,5 @@ int main() {
 
     DDA(x_intial,y_initial,x_final,y_final);
     getch();
+    closegraph();
 }
