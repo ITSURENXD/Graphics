@@ -11,6 +11,10 @@
 
 #endif // TIME_WRAPPER_H
 
+typedef struct co_ordinates {
+    int x;
+    int y;
+} coordinates;
 
 void graphicsinits() {
     int gdriver = DETECT, gmode;

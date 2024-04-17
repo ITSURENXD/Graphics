@@ -4,11 +4,6 @@
 #include <stdlib.h>
 #include "./Modules/Graphics.cpp"
 
-typedef struct co_ordinates {
-    int x;
-    int y;
-} coordinates;
-
 void DDA(coordinates Beginning, coordinates Ending) {
     float difference_x, difference_y, increment_x, increment_y, steps, x, y;
 
