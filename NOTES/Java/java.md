@@ -86,7 +86,7 @@
     ```java
     label.setIcon(image);
     ```
-    | Output | <img src="./Resources/Label_seticon.png" alt="Label Set Icon Screen Shot" width="300"/>|
+    | Output | <img src="../Resources/Label_seticon.png" alt="Label Set Icon Screen Shot" width="300"/>|
     |----------------|----------------|
 
 &nbsp;
