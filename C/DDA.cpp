@@ -4,38 +4,39 @@
 #include <stdlib.h>
 #include "./Modules/Graphics.cpp"
 
-void DDA(coordinates Beginning, coordinates Ending) {
-    float difference_x, difference_y, increment_x, increment_y, steps, x, y;
+void DDA(Coordinates_Int Beginning, Coordinates_Int Ending) {
+    Coordinates_Float Difference, Increment, Temp;
+    float steps;
 
     // Setting Up The differences
-    difference_x = Ending.x - Beginning.x;
-    difference_y = Ending.y - Beginning.y;
-    printf("\n Diff x: %f y: %f", difference_x, difference_y);
+    Difference.x = Ending.x - Beginning.x;
+    Difference.y = Ending.y - Beginning.y;
+    printf("\n Diff x: %f y: %f", Difference.x, Difference.y);
 
     // Setting up the Steps
-    if (abs(difference_x) > abs(difference_y)) {
-        steps=abs(difference_x);
+    if (abs(Difference.x) > abs(Difference.y)) {
+        steps=abs(Difference.x);
     } else {
-        steps=abs(difference_y);
+        steps=abs(Difference.y);
     }
     printf("\n Steps: %f",steps);
 
     // Settting up the Increments
-    increment_x=difference_x/steps;
-    increment_y=difference_y/steps;
-    printf("\n Increments x: %f y: %f", increment_x, increment_y);
+    Increment.x=Difference.x/steps;
+    Increment.y=Difference.y/steps;
+    printf("\n Increments x: %f y: %f", Increment.x, Increment.y);
 
     // Actual working
-    x=Beginning.x, y=Beginning.y;
+    Temp.x=Beginning.x, Temp.y=Beginning.y;
     graphicsinits();
     outtextxy(200, 20, "DDA"); 
-    putpixel(round(x),round(y),WHITE);
+    putpixel(round(Temp.x),round(Temp.y),WHITE);
     for (int i=0; i<steps;i++) {
         delay(5);
-        y+=increment_y;
-        x+=increment_x;
-        printf("\n Plot Values: x: %f y: %f", round(x), round(y));
-        putpixel(round(x),round(y),WHITE);
+        Temp.y+=Increment.y;
+        Temp.x+=Increment.x;
+        printf("\n Plot Values: x: %f y: %f", round(Temp.x), round(Temp.y));
+        putpixel(round(Temp.x),round(Temp.y),WHITE);
     }
 
     // Labeling
@@ -45,7 +46,7 @@ void DDA(coordinates Beginning, coordinates Ending) {
 
 int main() {
     system("cls");
-    coordinates Beginning, Ending;
+    Coordinates_Int Beginning, Ending;
 
     //Gettting Inputs
     printf("Enter The Starting Coordinate: ");
