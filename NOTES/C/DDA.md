@@ -1,4 +1,4 @@
-# 📏 DDA Line Drawing Algorithm
+# 📏 DDA Line Drawing Algorithm (Digital Differential Analyzer)
 - The **[Code:📑](../../C/DDA.cpp)**.
 - <img src='./Resources/DDA.svg' width="700px">
 - &emsp; &emsp; &emsp; &emsp;fig: for (2,2) to (7,5) 
