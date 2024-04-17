@@ -3,4 +3,5 @@
 
 &nbsp;
 # 🤖 Algorithms
-1. ### **[DDA Algorithm](./DDA.md)**
+1. ### **[Direct Line Drawing Algorithm](./DirectLine.md)**
+2. ### **[DDA Algorithm](./DDA.md)**
