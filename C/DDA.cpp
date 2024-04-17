@@ -4,12 +4,17 @@
 #include <stdlib.h>
 #include "./Modules/Graphics.cpp"
 
-void DDA(int x_initial, int y_initial, int x_final, int y_final) {
+typedef struct co_ordinates {
+    int x;
+    int y;
+} coordinates;
+
+void DDA(coordinates Beginning, coordinates Ending) {
     float difference_x, difference_y, increment_x, increment_y, steps, x, y;
 
     // Setting Up The differences
-    difference_x = x_final - x_initial;
-    difference_y = y_final - y_initial;
+    difference_x = Ending.x - Beginning.x;
+    difference_y = Ending.y - Beginning.y;
     printf("\n Diff x: %f y: %f", difference_x, difference_y);
 
     // Setting up the Steps
@@ -26,7 +31,7 @@ void DDA(int x_initial, int y_initial, int x_final, int y_final) {
     printf("\n Increments x: %f y: %f", increment_x, increment_y);
 
     // Actual working
-    x=x_initial, y=y_initial;
+    x=Beginning.x, y=Beginning.y;
     graphicsinits();
     outtextxy(200, 20, "DDA"); 
     putpixel(round(x),round(y),WHITE);
@@ -39,21 +44,21 @@ void DDA(int x_initial, int y_initial, int x_final, int y_final) {
     }
 
     // Labeling
-    outtextxy(x_initial,y_initial,"(x1,y1)");
-    outtextxy(x_final,y_final,"(x2,y2)");
+    outtextxy(Beginning.x,Beginning.y,"(x1,y1)");
+    outtextxy(Ending.y,Ending.y,"(x2,y2)");
 }
 
 int main() {
     system("cls");
-    int x_intial,y_initial,x_final,y_final;
+    coordinates Beginning, Ending;
 
     //Gettting Inputs
     printf("Enter The Starting Coordinate: ");
-    scanf("%d %d", &x_intial, &y_initial);
+    scanf("%d %d", &Beginning.x, &Beginning.y);
     printf("Enter The Ending Coordinate: ");
-    scanf("%d %d", &x_final, &y_final);
+    scanf("%d %d", &Ending.x, &Ending.y);
 
-    DDA(x_intial,y_initial,x_final,y_final);
+    DDA(Beginning, Ending);
     getch();
     closegraph();
 }
