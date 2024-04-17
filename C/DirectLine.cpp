@@ -29,7 +29,7 @@ void DirectLine(Coordinates_Int Beginning, Coordinates_Int Ending) {
 
     // Labeling
     outtextxy(Beginning.x,Beginning.y,"(x1,y1)");
-    outtextxy(Ending.y,Ending.y,"(x2,y2)");
+    outtextxy(Ending.x,Ending.y,"(x2,y2)");
 }
 
 int main()  {
