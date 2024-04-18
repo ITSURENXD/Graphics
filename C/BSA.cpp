@@ -16,10 +16,12 @@ void BSA(Coordinates_Int Beginning, Coordinates_Int Ending) {
     // Actual working
     Temp.x=Beginning.x, Temp.y=Beginning.y;
     graphicsinits();
+    printf("\n Putting pixel at ( %f , %f )", Temp.x, Temp.y);
+    putpixel(Temp.x,Temp.y,WHITE);
     outtextxy(200, 20, "BSA"); 
     if (Difference.x>=Difference.y)    {   
         parameter=2*Difference.y-Difference.x; 
-        putpixel(Temp.x,Temp.y,WHITE);
+        
         while (Temp.x<Ending.x) {
             if(parameter<0) {
                 Temp.x++;
@@ -31,11 +33,11 @@ void BSA(Coordinates_Int Beginning, Coordinates_Int Ending) {
                 parameter=parameter+(2*Difference.y)-(2*Difference.x);
             }
             printf("\n Putting pixel at ( %f , %f )", Temp.x, Temp.y);
+            delay(5);
             putpixel(Temp.x,Temp.y,WHITE);
         }
     } else if (Difference.y>Difference.x) {
-        parameter=2*Difference.y-Difference.x; 
-        putpixel(Temp.x,Temp.y,WHITE);
+        parameter=2*Difference.x-Difference.y; 
         while (Temp.y<Ending.y) {
             if(parameter<0) {
                 Temp.y++;
@@ -47,6 +49,7 @@ void BSA(Coordinates_Int Beginning, Coordinates_Int Ending) {
                 parameter=parameter+(2*Difference.x)-(2*Difference.y);
             }
             printf("\n Putting pixel at ( %f , %f )", Temp.x, Temp.y);
+            delay(5);
             putpixel(Temp.x,Temp.y,WHITE);
         }
     }
