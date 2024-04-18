@@ -16,19 +16,19 @@
 &nbsp;
 ## 🤖 **Algorithm**
 1. Input the line endpoints and store the left endpiont in (x-initial,y-initial) and right in (x-final,y-final).
-    ```c
+    ```cpp
     printf("Enter The Starting Coordinate: ");
     scanf("%d %d", &Beginning.x, &Beginning.y);
     printf("Enter The Ending Cooardinate: ");
     scanf("%d %d", &Ending.x, &Ending.y);
     ```
 2. Calculate the values for Differences in x and y. 
-    ```c
+    ```cpp
     Difference.x = Ending.x - Beginning.x;
     Difference.y = Ending.y - Beginning.y;
     ```
 3. Calculate steps as the absolute value of the largest difference.
-    ```c
+    ```cpp
     if (abs(Difference.x) > abs(Difference.y)) {
         steps=abs(Difference.x);
     } else {
@@ -36,12 +36,12 @@
     }
     ```
 4. Calculate the incremental values in x and y.
-    ```c
+    ```cpp
     Increment.x=Difference.x/steps;
     Increment.y=Difference.y/steps;
     ```
 5. Set x to x-initial and y to y-initial and draw the pixel at coordinate (round(x),round(y))
-    ```c
+    ```cpp
     Temp.x=Beginning.x, Temp.y=Beginning.y;
     putpixel(round(Temp.x),round(Temp.y),WHITE);;
     ```
@@ -49,7 +49,7 @@
     - Set x to x + x-increment.
     - Set y to y + y-increment.
     - Draw the pixel at coordinate (round(x),round(y));
-    ```c
+    ```cpp
     for (int i=0; i<steps;i++) {
         delay(5);
         Temp.y+=Increment.y;

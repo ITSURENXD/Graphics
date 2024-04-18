@@ -30,6 +30,7 @@ void DDA(Coordinates_Int Beginning, Coordinates_Int Ending) {
     Temp.x=Beginning.x, Temp.y=Beginning.y;
     graphicsinits();
     outtextxy(200, 20, "DDA"); 
+    printf("\n Putting pixel at ( %f , %f )", Temp.x, Temp.y);
     putpixel(round(Temp.x),round(Temp.y),WHITE);
     for (int i=0; i<steps;i++) {
         delay(5);

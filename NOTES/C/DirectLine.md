@@ -11,30 +11,30 @@
 &nbsp;
 ## 🤖 **Algorithm**
 1. Input the line endpoints and store the left endpiont in (x-initial,y-initial) and right in (x-final,y-final).
-    ```c
+    ```cpp
     printf("Enter The Starting Coordinate: ");
     scanf("%d %d", &Beginning.x, &Beginning.y);
     printf("Enter The Ending Cooardinate: ");
     scanf("%d %d", &Ending.x, &Ending.y);
     ```
 2. Calculate the values for Differences in x and y. 
-    ```c
+    ```cpp
     Difference.x = Ending.x - Beginning.x;
     Difference.y = Ending.y - Beginning.y;
     ```
 3. Calculate the Slope and Constant.
-    ```c
+    ```cpp
     float Slope = Difference.y/Difference.x;
     float Constant = Beginning.y-Slope*Beginning.x;
     ```
 4. Set x to x-initial.
-    ```c
+    ```cpp
     Temp.x=Beginning.x;
     ```
 5. Repeat until the Beginning x coordinate has reached its ending coordinates.
     - Solve for y=mx+b; where m = Slope and b = Constant.
     - Draw the pixel at coordinate (round(x),round(y));
-    ```c
+    ```cpp
     for (; Temp.x<=Ending.x;Temp.x=Temp.x+1) {
         delay(5);
         Temp.y=(Slope*Temp.x)+Constant;
