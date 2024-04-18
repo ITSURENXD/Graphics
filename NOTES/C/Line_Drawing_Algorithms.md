@@ -5,3 +5,4 @@
 # 🤖 Algorithms
 1. ### **[Direct Line Drawing Algorithm](./DirectLine.md)**
 2. ### **[DDA Algorithm](./DDA.md)**
+3. ### **[BSA Algorithm](./BSA.md)**
