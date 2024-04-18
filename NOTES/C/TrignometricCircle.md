@@ -35,4 +35,4 @@
 ```powershell
 g++ TrignometricCircle.cpp -o TrignometricCircle -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 ; ./TrignometricCircle.exe
 ```
-<img src='./Resources/DirectCircle.gif'>
+<img src='./Resources/TrignometricCircle.gif'>
