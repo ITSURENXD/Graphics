@@ -98,6 +98,6 @@ void drawer(float points[5][2]) {
 # 📤 Output
 - Ran using:
 ```powershell
-g++ Cubespin.cpp -o Cubespin -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32
+g++ Cubespin.cpp -o Cubespin -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 ; Cubespin.exe
 ```
 <img src='./Resources/CubeSpin.gif'>

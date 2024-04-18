@@ -46,6 +46,6 @@
 # 📤 Output
 - Ran using:
 ```powershell
-g++ DirectLine.cpp -o DirectLine -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32
+g++ DirectLine.cpp -o DirectLine -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 ; ./DirectLine.exe
 ```
 <img src='./Resources/DirectLine.gif'>

@@ -62,6 +62,6 @@
 # 📤 Output
 - Ran using:
 ```powershell
-g++ DDA.cpp -o DDA -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32
+g++ DDA.cpp -o DDA -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 ; ./DDA.exe
 ```
 <img src='./Resources/DDA.gif'>
