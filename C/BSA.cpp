@@ -19,7 +19,7 @@ void BSA(Coordinates_Int Beginning, Coordinates_Int Ending) {
     printf("\n Putting pixel at ( %f , %f )", Temp.x, Temp.y);
     putpixel(Temp.x,Temp.y,WHITE);
     outtextxy(200, 20, "BSA"); 
-    if (Difference.x>=Difference.y)    {   
+    if (abs(Difference.x)>=abs(Difference.y)) {   
         parameter=2*Difference.y-Difference.x; 
         
         while (Temp.x<Ending.x) {
@@ -36,7 +36,7 @@ void BSA(Coordinates_Int Beginning, Coordinates_Int Ending) {
             delay(5);
             putpixel(Temp.x,Temp.y,WHITE);
         }
-    } else if (Difference.y>Difference.x) {
+    } else {
         parameter=2*Difference.x-Difference.y; 
         while (Temp.y<Ending.y) {
             if(parameter<0) {
