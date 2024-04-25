@@ -6,34 +6,36 @@
 
 void SymmetricPlot(Coordinates_Int Temp, Coordinates_Int Centre) {
     // First Quadrant 
-    putpixel(Centre.x+Temp.x,Centre.y+Temp.y,WHITE);
-    putpixel(Centre.x+Temp.y,Centre.y+Temp.x,WHITE);
+    putpixel(Centre.x+Temp.x, Centre.y+Temp.y, WHITE);
+    putpixel(Centre.x+Temp.y, Centre.y+Temp.x, WHITE);
     delay(15);
     // Second Quadrant
-    putpixel(Centre.x-Temp.x,Centre.y+Temp.y,WHITE);
-    putpixel(Centre.x-Temp.y,Centre.y+Temp.x,WHITE);
+    putpixel(Centre.x-Temp.x, Centre.y+Temp.y, WHITE);
+    putpixel(Centre.x-Temp.y, Centre.y+Temp.x, WHITE);
     delay(15);
     // Third Quadrant
-    putpixel(Centre.x-Temp.x,Centre.y-Temp.y,WHITE);
-    putpixel(Centre.x-Temp.y,Centre.y-Temp.x,WHITE);
+    putpixel(Centre.x-Temp.x, Centre.y-Temp.y, WHITE);
+    putpixel(Centre.x-Temp.y, Centre.y-Temp.x, WHITE);
     delay(15);
     // Fourth Quadrant
-    putpixel(Centre.x+Temp.x,Centre.y-Temp.y,WHITE);
-    putpixel(Centre.x+Temp.y,Centre.y-Temp.x,WHITE);
+    putpixel(Centre.x+Temp.x, Centre.y-Temp.y, WHITE);
+    putpixel(Centre.x+Temp.y, Centre.y-Temp.x, WHITE);
     delay(15);
 }
 
 void MidpointCircle(Coordinates_Int Centre, float Radius) {
-    Coordinates_Int Temp;
     graphicsinits();
-    Temp.x=0;Temp.y=Radius; 
-    int Parameter= 1 - Radius;
-    SymmetricPlot(Temp, Centre);    
-    while (Temp.x<=Temp.y) {
+    Coordinates_Int Temp;
+    int Parameter = 1 - Radius;
+
+    Temp.x = 0; Temp.y = Radius; 
+    SymmetricPlot(Temp, Centre);  
+
+    while (Temp.x <= Temp.y) {
         if (Parameter<0) {
-            Parameter = Parameter + 2*Temp.x+3;
+            Parameter = Parameter + 2*Temp.x + 3;
         } else {
-            Parameter = Parameter + 2*Temp.x - 2*Temp.y+5;
+            Parameter = Parameter + 2*Temp.x - 2*Temp.y + 5;
             Temp.y--;
         }
         SymmetricPlot(Temp,Centre);

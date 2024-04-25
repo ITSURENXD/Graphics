@@ -4,18 +4,15 @@
 #include <stdlib.h>
 #include "./Modules/Graphics.cpp"
 
-void DirectEllipse(Coordinates_Int Centre, Coordinates_Int Radii) {
+void TrignometricEllipse(Coordinates_Int Centre, Coordinates_Int Radii) {
     graphicsinits();
     Coordinates_Float Temp;
-    
-    Temp.x = Centre.x - Radii.x;  
-    while (Temp.x < (Temp.x + Radii.x)) {
-        // y = yc ± (b/a)*√(a^2 - (x-xc)^2)
-        Temp.y = Centre.y + ((Radii.y/Radii.x) * sqrt( pow(Radii.x,2)-pow((Temp.x-Centre.x),2) ) );
+     
+    for (int Theta=0;Theta<360;Theta++) {
+        Temp.x = Centre.x + Radii.x * cos(Theta);
+        Temp.y = Centre.y + Radii.y * sin(Theta);
         putpixel(round(Temp.x), round(Temp.y), WHITE);
-        Temp.y = Centre.y - ((Radii.y/Radii.x) * sqrt( pow(Radii.x,2)-pow((Temp.x-Centre.x),2) ) );
-        putpixel(round(Temp.x), round(Temp.y), WHITE);
-
+        delay(15);
         Temp.x++;
     }
 }
@@ -29,8 +26,8 @@ int main() {
     scanf("%d %d", &Centre.x, &Centre.y);
     printf("Enter The Length of Major and Minor Axis: ");
     scanf("%d %d", &Radii.x,&Radii.y);
-
-    DirectEllipse(Centre, Radii);
+    
+    TrignometricEllipse(Centre, Radii);
     getch();
     closegraph();
 }
