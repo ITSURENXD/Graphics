@@ -6,20 +6,20 @@
 
 void SymmetricPlot(Coordinates_Int Temp, Coordinates_Int Centre) {
     // First Quadrant 
-    putpixel(Centre.x+Temp.x, Centre.y+Temp.y, WHITE);
-    putpixel(Centre.x+Temp.y, Centre.y+Temp.x, WHITE);
+    putpixel(Centre.x + Temp.x, Centre.y + Temp.y, WHITE);
+    putpixel(Centre.x + Temp.y, Centre.y + Temp.x, WHITE);
     delay(15);
     // Second Quadrant
-    putpixel(Centre.x-Temp.x, Centre.y+Temp.y, WHITE);
-    putpixel(Centre.x-Temp.y, Centre.y+Temp.x, WHITE);
+    putpixel(Centre.x - Temp.x, Centre.y + Temp.y, WHITE);
+    putpixel(Centre.x - Temp.y, Centre.y + Temp.x, WHITE);
     delay(15);
     // Third Quadrant
-    putpixel(Centre.x-Temp.x, Centre.y-Temp.y, WHITE);
-    putpixel(Centre.x-Temp.y, Centre.y-Temp.x, WHITE);
+    putpixel(Centre.x - Temp.x, Centre.y - Temp.y, WHITE);
+    putpixel(Centre.x - Temp.y, Centre.y - Temp.x, WHITE);
     delay(15);
     // Fourth Quadrant
-    putpixel(Centre.x+Temp.x, Centre.y-Temp.y, WHITE);
-    putpixel(Centre.x+Temp.y, Centre.y-Temp.x, WHITE);
+    putpixel(Centre.x + Temp.x, Centre.y - Temp.y, WHITE);
+    putpixel(Centre.x + Temp.y, Centre.y - Temp.x, WHITE);
     delay(15);
 }
 
@@ -50,7 +50,7 @@ int main() {
 
     //Gettting Inputs
     printf("Enter The Center Coordinate: ");
-    scanf("%d %d", &Centre.x, &Centre.y);
+    scanf("%d %d", &Centre.x ,  &Centre.y)  ;
     printf("Enter The Radius of the circle: ");
     scanf("%f", &Radius);
 
