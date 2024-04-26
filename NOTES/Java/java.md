@@ -14,8 +14,8 @@
     ### Setting up a Visible screen
     - It is done with JFrame but visibility needs to be toggled.
     - Size of the window needs to be set or it becomes too small to see.
-    - $\color{#D29922}\textsf{\Large\&#x26A0;\kern{0.2cm}\normalsize Warning}$  The close button only hides the window and doesn't close it. reference the [Problem](#close-button-hiding-window)
-    - <span style="color:orange"> **WARNING:**</span> The Window is resizable. reference the [Problem](#make-window-unresizable)
+    - $\color{#D29922}\textsf{\Large\&#x26A0;\kern{0.2cm}\normalsize Warning}$:  The close button only hides the window and doesn't close it. reference the [Problem](#close-button-hiding-window)
+    - $\color{#D29922}\textsf{\Large\&#x26A0;\kern{0.2cm}\normalsize Warning}$: The Window is resizable. reference the [Problem](#make-window-unresizable)
 
     ```java
     public class test {
@@ -78,7 +78,7 @@
     ```java
     JLabel label = new JLabel("Hello World");
     ```
-    - <span style="color:green"> **NOTE:**</span> This will put the left to the y centered x left most position of the screen by default 
+    - $\color{#58A6FF}\textsf{\Large\&#x24D8;\kern{0.2cm}\normalsize Note}$: This will put the left to the y centered x left most position of the screen by default 
 
     ### Adding Image Icon to a Label Object 
     - To add the image to the label along, first [create an Image Icon](#giving-icon-to-the-window-🔧needs-work).  
