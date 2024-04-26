@@ -77,8 +77,8 @@
     - Set x to x<sub>k</sub> or x<sub>k</sub> +1 according to the parameter where k is the step.
     - Draw the pixel at that coordinate.
     - Decrement the Value of y.
-    - For ($P_{2k}<0$) x++:&emsp; $P_{2k+1} = P_{2k} + 2r_y^2 (x_k+1) - 2r_x^2 (y_k-1) + r_x^2$
-    - For ($P_{2k}>=0$):&emsp; $P_{2k+1} = P_{2k} - 2r_x^2 (y_k-1) + r_x^2$
+    - For ($P_{2k}<0$) x++:&emsp; $\color{#1DACD6}P_{2k+1} = P_{2k} + 2r_y^2 (x_k+1) - 2r_x^2 (y_k-1) + r_x^2$
+    - For ($P_{2k}>=0$):&emsp; $\color{#1DACD6}P_{2k+1} = P_{2k} - 2r_x^2 (y_k-1) + r_x^2$
     ```cpp
     while (Temp.y!=0) {
         Temp.y--;
@@ -94,6 +94,7 @@
     ```
 
 &nbsp;
+$\color{#08E8DE}{\textsf{lorem ipsum}}$
 # 📤 Output
 - Ran using:
 ```powershell
