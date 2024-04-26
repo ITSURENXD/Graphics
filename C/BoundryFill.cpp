@@ -22,14 +22,14 @@ void BoundryFill8Connected(int x, int y, int FillColor, int BoundryColor) {
         delay(1);
         putpixel(x, y,FillColor);
 
-        BoundryFill4Connected(x+1,y, FillColor, BoundryColor);
-        BoundryFill4Connected(x-1,y, FillColor, BoundryColor);
-        BoundryFill4Connected(x,y+1, FillColor, BoundryColor);
-        BoundryFill4Connected(x,y-1, FillColor, BoundryColor);
-        BoundryFill4Connected(x+1,y+1, FillColor, BoundryColor);
-        BoundryFill4Connected(x+1,y-1, FillColor, BoundryColor);
-        BoundryFill4Connected(x-1,y+1, FillColor, BoundryColor);
-        BoundryFill4Connected(x-1,y-1, FillColor, BoundryColor);
+        BoundryFill8Connected(x+1,y, FillColor, BoundryColor);
+        BoundryFill8Connected(x-1,y, FillColor, BoundryColor);
+        BoundryFill8Connected(x,y+1, FillColor, BoundryColor);
+        BoundryFill8Connected(x,y-1, FillColor, BoundryColor);
+        BoundryFill8Connected(x+1,y+1, FillColor, BoundryColor);
+        BoundryFill8Connected(x+1,y-1, FillColor, BoundryColor);
+        BoundryFill8Connected(x-1,y+1, FillColor, BoundryColor);
+        BoundryFill8Connected(x-1,y-1, FillColor, BoundryColor);
     }
 }
 
@@ -60,7 +60,7 @@ int main() {
     }
     //Choosing colors
     do {
-        printf("Enter the Fill color and BoundryColor in Numbers: ", Centre.x, Centre.y, Radius);
+        printf("Enter the Fill color and BoundryColor in Numbers: ");
         scanf("%d %d", &FillColor, &BoundryColor);
     } while (FillColor>15 || BoundryColor>15);
     // Graphing
