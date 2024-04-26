@@ -28,8 +28,8 @@
     Difference.y = Ending.y - Beginning.y;
     ```
 3. Calculate the Initial Value for Parameter; 
-    -  for (m<=1): p = 2*Δy - Δx; 
-    -  for (m>1): p = 2*Δx - Δy;
+    -  for (m<=1):&emsp; $P_0 = 2\Delta y - \Delta x$; 
+    -  for (m>1):&emsp; $P_0 = 2\Delta x - \Delta y$; 
     1. If Difference on X-coordinates is greater than Y-coordinates:
     ```cpp
     parameter=2*Difference.y-Difference.x; 
@@ -48,8 +48,8 @@
     - Set y to yk or yk+1 according to the parameter where k is the step.
     - Draw the pixel at that coordinate.
     - For ( |m| < 1): 
-        1. If (P < 0):  P = P + 2Δy
-        2. If (P >= 0): P = P + 2Δy - 2Δx
+        1. If ($P_k < 0$):&emsp; $P_{k+1} = P_k + 2\Delta y$
+        2. If ($P_k >= 0$):&emsp; $P_{k+1} = P_k + 2\Delta y - 2\Delta x$
     - For ( |m| >=1): just interchange Δx and Δy on parameters. 
     ```cpp
     if (Difference.x>=Difference.y)    {   

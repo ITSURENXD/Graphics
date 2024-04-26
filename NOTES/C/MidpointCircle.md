@@ -20,7 +20,7 @@
     scanf("%f", &Radius);
     ```
 3. Calculate the Initial Value for Parameter; 
-    -  for Integer: P0 = 1 - r.
+    -  for Integer:&emsp; $P_0 = 1 - r$.
     ```cpp
     int Parameter = 1 - Radius; 
     ```
@@ -51,11 +51,11 @@
     }
     ```
 5. Repeat until either X or Y has reached equal values that is one octant is completed:
-    - Calculate Parameter according to the value of the initial parameter.
-    - Set y to yk or yk - 1 according to the parameter where k is the step.
+   - Calculate Parameter according to the value of the initial parameter.
+    - Set y to y<sub>k</sub> or y<sub>k</sub> - 1 according to the parameter where k is the step.
     - Draw the pixel at that coordinate.
-    - For (P<0): Pk+1 = Pk + 2x +3
-    - For (P>=0) y--: Pk+1 = Pk + 2x -2y + 5 
+    - For ($P_k<0$):&emsp; $P_{k+1} = P_{k} + 2x + 3$
+    - For ($P_k>=0$) y--:&emsp; $P_{k+1} = P_{k} + 2x -2y + 5 $
     ```cpp
     while (Temp.x <= Temp.y) {
         if (Parameter<0) {

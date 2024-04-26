@@ -58,7 +58,7 @@ void MidpointEllipse(Coordinates_Int Centre, Coordinates_Int Radii) {
         printf("\n\t Parameter=%d Condition1: %d condition2: %d", Parameter2, Temp.y, 0);
         Temp.y--;
 
-        if (Parameter2<=0) {
+        if (Parameter2 <= 0) {
             Temp.x++;
             // p2k+1 = p2k + 2*(ry^2)*(x+1) - 2*(rx^2)*(y-1) + rx^2;
             Parameter2 = Parameter2 + (2*pow(Radii.y,2) * Temp.x) - (2*pow(Radii.x,2) * Temp.y) + pow(Radii.x,2);
