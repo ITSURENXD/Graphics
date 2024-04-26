@@ -4,7 +4,6 @@
 #include "./Modules/Graphics.cpp"
 
 #define MAX_SIZE 50
-#define MAX_SCANLINES 500
 
 int yMinimum(Coordinates_Int EdgeList[], int NumberofEdges) {
     int Minimum=EdgeList[0].y;
