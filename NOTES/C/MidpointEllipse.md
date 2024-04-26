@@ -20,7 +20,7 @@
     scanf("%d %d", &Radii.x,&Radii.y);
     ```
 3. **REGION 1**: Calculate the Initial Value for $P_{10}$; 
-    -  for Integer:&emsp; $P_{10} = r_y^2 - r_x^2 r_y + \frac{1}{4} r_x^2$.
+    -  for Integer:&emsp; $\color{#1DACD6}P_{10} = r_y^2 - r_x^2 r_y + \frac{1}{4} r_x^2$.
     ```cpp
     int Parameter1 = pow(Radii.y,2) - (pow(Radii.x,2)*Radii.y) + (pow(Radii.x,2)/4);
     ```
@@ -51,8 +51,8 @@
     - Set y to y<sub>k</sub> or y<sub>k</sub> - 1 according to the parameter where k is the step.
     - Draw the pixel at that coordinate. 
     - Increment the value of x;
-    - For ($P_{1k}<0$):&emsp; $P_{1k+1} = P_{1k} + 2r_y^2 (x_k+1) + r_y^2$
-    - For ($P_{1k}>=0$) y--:&emsp; $P_{1k+1} = P_{1k} + 2r_y^2 (x_k+1) - 2r_x^2 (y_k-1) + r_x^2$
+    - For ($P_{1k}<0$):&emsp; $\color{#1DACD6}P_{1k+1} = P_{1k} + 2r_y^2 (x_k+1) + r_y^2$
+    - For ($P_{1k}>=0$) y--:&emsp; $\color{#1DACD6}P_{1k+1} = P_{1k} + 2r_y^2 (x_k+1) - 2r_x^2 (y_k-1) + r_x^2$
     ```cpp
     while (2*pow(Radii.y,2)*(Temp.x+1) < 2*pow(Radii.x,2)*Temp.y) { 
         Parameter1, 2*pow(Radii.y,2)*(Temp.x+1), 2*pow(Radii.x,2)*Temp.y);
@@ -68,7 +68,7 @@
     }
     ```
 6. **REGION 2**: Calculate the Initial Value for $P_{20}$; 
-    -  for Integer:&emsp; $P_{20} = r_y^2(x_0 + \frac{1}{2})^2 + r_x^2 (y_0 -1)^2 - r_x^2 r_y^2$.
+    -  for Integer:&emsp; $\color{#1DACD6}P_{20} = r_y^2(x_0 + \frac{1}{2})^2 + r_x^2 (y_0 -1)^2 - r_x^2 r_y^2$.
     ```cpp
    int Parameter2 = pow(Radii.y,2) * pow((Temp.x + 0.5),2) + pow(Radii.x,2)*pow((Temp.y-1),2) - pow(Radii.x,2)*pow(Radii.y,2);
     ```
@@ -94,7 +94,6 @@
     ```
 
 &nbsp;
-$\color{#08E8DE}{\textsf{lorem ipsum}}$
 # 📤 Output
 - Ran using:
 ```powershell

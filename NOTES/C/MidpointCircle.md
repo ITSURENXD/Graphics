@@ -20,7 +20,7 @@
     scanf("%f", &Radius);
     ```
 3. Calculate the Initial Value for Parameter; 
-    -  for Integer:&emsp; $P_0 = 1 - r$.
+    -  for Integer:&emsp; $\color{#1DACD6}P_0 = 1 - r$.
     ```cpp
     int Parameter = 1 - Radius; 
     ```
@@ -54,8 +54,8 @@
    - Calculate Parameter according to the value of the initial parameter.
     - Set y to y<sub>k</sub> or y<sub>k</sub> - 1 according to the parameter where k is the step.
     - Draw the pixel at that coordinate.
-    - For ($P_k<0$):&emsp; $P_{k+1} = P_{k} + 2x + 3$
-    - For ($P_k>=0$) y--:&emsp; $P_{k+1} = P_{k} + 2x -2y + 5 $
+    - For ($P_k<0$):&emsp; $\color{#1DACD6}P_{k+1} = P_{k} + 2x + 3$
+    - For ($P_k>=0$) y--:&emsp; $\color{#1DACD6}P_{k+1} = P_{k} + 2x -2y + 5 $
     ```cpp
     while (Temp.x <= Temp.y) {
         if (Parameter<0) {
