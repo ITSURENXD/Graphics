@@ -1,5 +1,6 @@
 ##Ignore all files of C Folder
 /C/*
+.vscode/
 
 ## With Exception of 
 ## Sub Folder
