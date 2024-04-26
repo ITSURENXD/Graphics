@@ -6,6 +6,26 @@
 #define MAX_SIZE 50
 #define MAX_SCANLINES 500
 
+int yMinimum(Coordinates_Int EdgeList[], int NumberofEdges) {
+    int Minimum=EdgeList[0].y;
+    for (int i=1; i < NumberofEdges; i++) {
+        if (EdgeList[i].y<Minimum) {
+            Minimum=EdgeList[i].y;
+        }
+    }
+    return Minimum;
+}
+
+int yMaximum(Coordinates_Int EdgeList[], int NumberofEdges) {
+    int Maximum=EdgeList[0].y;
+    for (int i=0; i < NumberofEdges; i++) {
+        if (EdgeList[i].y>Maximum) {
+            Maximum=EdgeList[i].y;
+        }
+    }
+    return Maximum;
+}
+
 void PolygonInputs(Coordinates_Int EdgeList[], int *NumberofEdges, float Slopes[]) {
     // Taking the Number of Edges
     printf("\nPOLYGON DEFINITION: \n\nEnter the number of edges of Polygon: ");
@@ -85,7 +105,7 @@ int main() {
     PolygonDraw( EdgeList, NumberofEdges);
 
     // Scan Lines Rasterizing
-    for (int Scanline=0; Scanline < MAX_SCANLINES; Scanline++) {
+    for (int Scanline=yMinimum(EdgeList,NumberofEdges); Scanline < yMaximum(EdgeList, NumberofEdges); Scanline++) {
         X_IntersectionFindFill(EdgeList, NumberofEdges, Scanline, Slopes);
     }
 
