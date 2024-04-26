@@ -8,6 +8,7 @@
 2. More efficent than DDA.
 3. Can be used generate Circle and other curves and is not limited to just lines.
 4. Produces Mathematically Accurate results.
+5. Faster than DDA because even though multiplication is required, it can be easily achieved by a shift operation.
 
 ### ⬇️ Disadvantages
 1. An additional calculation for parameters must be done with each step. 
@@ -27,7 +28,8 @@
     Difference.y = Ending.y - Beginning.y;
     ```
 3. Calculate the Initial Value for Parameter; 
-    -  for (m<=1): p = 2*Δy-Δx; for (m>1): p = 2*Δx-Δy;
+    -  for (m<=1): p = 2*Δy - Δx; 
+    -  for (m>1): p = 2*Δx - Δy;
     1. If Difference on X-coordinates is greater than Y-coordinates:
     ```cpp
     parameter=2*Difference.y-Difference.x; 
@@ -45,17 +47,21 @@
     - Calculate Parameter according to the value of the initial parameter.
     - Set y to yk or yk+1 according to the parameter where k is the step.
     - Draw the pixel at that coordinate.
+    - For ( |m| < 1): 
+        1. If (P < 0):  P = P + 2Δy
+        2. If (P >= 0): P = P + 2Δy - 2Δx
+    - For ( |m| >=1): just interchange Δx and Δy on parameters. 
     ```cpp
     if (Difference.x>=Difference.y)    {   
         parameter=2*Difference.y-Difference.x; 
         
         while (Temp.x<Ending.x) {
+            Temp.x++;
             if(parameter<0) {
-                Temp.x++;
                 // Temp.y Remains the same
                 parameter=parameter+2*Difference.y; // p(k+1) = pk + 2*Δy;
             } else {
-                Temp.x++;
+                
                 Temp.y++;
                 parameter=parameter+(2*Difference.y)-(2*Difference.x); // p(k+1) = pk + 2*Δy - 2*Δx;
             }
@@ -64,13 +70,12 @@
     } else if (Difference.y>Difference.x) {
         parameter=2*Difference.x-Difference.y; 
         while (Temp.y<Ending.y) {
+            Temp.y++;
             if(parameter<0) {
-                Temp.y++;
                 // Temp.y Remains the same
                 parameter=parameter+2*Difference.x; // p(k+1) = pk + 2*Δx;
             } else {
                 Temp.x++;
-                Temp.y++;
                 parameter=parameter+(2*Difference.x)-(2*Difference.y); // p(k+1) = pk + 2*Δx - 2*Δy;
             }
             putpixel(Temp.x,Temp.y,WHITE);

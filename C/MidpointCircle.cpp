@@ -47,7 +47,6 @@ int main() {
     system("cls");
     Coordinates_Int Centre;
     float Radius;
-
     //Gettting Inputs
     printf("Enter The Center Coordinate: ");
     scanf("%d %d", &Centre.x ,  &Centre.y)  ;
