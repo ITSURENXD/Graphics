@@ -52,7 +52,7 @@
     - Draw the pixel at that coordinate. 
     - Increment the value of x;
     - For ($P_{1k}<0$):&emsp; $\color{#1DACD6}P_{1k+1} = P_{1k} + 2r_y^2 (x_k+1) + r_y^2$
-    - For ($P_{1k}>=0$) y--:&emsp; $\color{#1DACD6}P_{1k+1} = P_{1k} + 2r_y^2 (x_k+1) - 2r_x^2 (y_k-1) + r_x^2$
+    - For ($P_{1k}>=0$) y--:&emsp; $\color{#1DACD6}P_{1k+1} = P_{1k} + 2r_y^2 (x_k+1) - 2r_x^2 (y_k-1) + r_y^2$
     ```cpp
     while (2*pow(Radii.y,2)*(Temp.x+1) < 2*pow(Radii.x,2)*Temp.y) { 
         Parameter1, 2*pow(Radii.y,2)*(Temp.x+1), 2*pow(Radii.x,2)*Temp.y);
