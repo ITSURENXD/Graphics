@@ -15,7 +15,7 @@
 
 &nbsp;
 ## 🤖 **Algorithm**
-1. Input the line endpoints and store the left endpiont in (x-initial,y-initial) and right in (x-final,y-final).
+1. Input the line endpoints and store the left endpoint in (x-initial,y-initial) and right in (x-final,y-final).
     ```cpp
     printf("Enter The Starting Coordinate: ");
     scanf("%d %d", &Beginning.x, &Beginning.y);
@@ -38,19 +38,19 @@
     ```cpp
     parameter=2*Difference.x-Difference.y; 
     ```
-4. Set x to x-initial and y to y-initial and draw the pixel at coordinate (round(x),round(y))
+4. Set x-initial to x and y-initial to y and draw the pixel at the coordinate (round(x),round(y)).
     ```cpp
     Temp.x=Beginning.x, Temp.y=Beginning.y;
     putpixel(round(Temp.x),round(Temp.y),WHITE);;
     ```
 5. Repeat until either X or Y has reached from the beginning coordinates to the ending coordinates according to the values of m:
     - Calculate Parameter according to the value of the initial parameter.
-    - Set y to yk or yk+1 according to the parameter where k is the step.
+    - Set y to $y_k$ or $y_k + 1$ according to the parameter where k is the step.
     - Draw the pixel at that coordinate.
     - For ( |m| < 1): 
         1. If ($P_k < 0$):&emsp; $\color{#1DACD6}P_{k+1} = P_k + 2\Delta y$
         2. If ($P_k >= 0$):&emsp; $\color{#1DACD6}P_{k+1} = P_k + 2\Delta y - 2\Delta x$
-    - For ( |m| >=1): just interchange Δx and Δy on parameters. 
+    - For ( |m| >=1): just interchange $\Delta x$ and $\Delta y$ on parameters. 
     ```cpp
     if (Difference.x>=Difference.y)    {   
         parameter=2*Difference.y-Difference.x; 

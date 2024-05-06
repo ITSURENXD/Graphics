@@ -7,12 +7,12 @@
 3. Fast because even though multiplication is required, it can be easily achieved by a shift operation.
 
 ### ⬇️ Disadvantages
-1. Due to floating point calculation actual pixel position may be away from the circular path.
+1. Due to floating point calculation actual pixel position may be away from the ellipse's path.
 2. Due to Square Root Calculation, algorithm requires more computational time so becomes slower. 
 
 &nbsp;
 ## 🤖 **Algorithm**
-1. Input the line endpoints and store the Centre and the Radius of the Ellipse:
+1. Input the Centre and the Radius of the Ellipse:
     ```cpp
     printf("Enter The Center Coordinate: ");
     scanf("%d %d", &Centre.x ,  &Centre.y ) ;
@@ -24,7 +24,7 @@
     ```cpp
     int Parameter1 = pow(Radii.y,2) - (pow(Radii.x,2)*Radii.y) + (pow(Radii.x,2)/4);
     ```
-4. **REGION 1**: Set 0 to x-initial and r<sub>y</sub> to y-initial and draw the pixel at symmetric Coordinates in the oxtants.
+4. **REGION 1**: Set x-initial to 0 and y-initial to $r_y$ and draw the pixel at symmetric Coordinates in the oxtants.
     ```cpp
     Temp.x = 0; Temp.y = Radii.y;
     SymmetricPlot(Temp,Centre);
@@ -72,7 +72,7 @@
     ```cpp
    int Parameter2 = pow(Radii.y,2) * pow((Temp.x + 0.5),2) + pow(Radii.x,2)*pow((Temp.y-1),2) - pow(Radii.x,2)*pow(Radii.y,2);
     ```
-7. **REGION 2**: Repeat until y != 0.
+7. **REGION 2**: Repeat until $y != 0$.
     - Calculate Parameter according to the value of the initial parameter.
     - Set x to x<sub>k</sub> or x<sub>k</sub> +1 according to the parameter where k is the step.
     - Draw the pixel at that coordinate.
@@ -97,6 +97,6 @@
 # 📤 Output
 - Ran using:
 ```powershell
-g++ MidpointEllipse.cpp -o MidpointCirlce -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 ; ./MidpointEllipse.exe
+g++ MidpointEllipse.cpp -o MidpointEllipse -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 ; ./MidpointEllipse.exe
 ```
 <img src='./Resources/MidpointEllipse.gif'>

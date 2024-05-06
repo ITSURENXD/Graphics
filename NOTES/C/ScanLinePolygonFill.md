@@ -39,7 +39,7 @@
         }
     }
     ```
-3. Find the Minimum and Maximum of the Y element of the polygon and run scan lines from minimum to the maximum.
+3. Find the Minimum and Maximum of the Y elements of the polygon and run scan lines from minimum to the maximum.
     ```cpp
     int yMinimum(Coordinates_Int EdgeList[], int NumberofEdges) {
         int Minimum=EdgeList[0].y;
@@ -101,6 +101,6 @@
 # 📤 Output
 - Ran using:
 ```powershell
-g++ ScanLinePolygonFill.cpp -o MidpointCirlce -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 ; ./ScanLinePolygonFill.exe
+g++ ScanLinePolygonFill.cpp -o ScanLinePolygonFill -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 ; ./ScanLinePolygonFill.exe
 ```
 <img src='./Resources/ScanLinePolygonFill.gif'>

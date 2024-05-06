@@ -15,12 +15,12 @@
 
 &nbsp;
 ## 🤖 **Algorithm**
-1. Input the line endpoints and store the left endpiont in (x-initial,y-initial) and right in (x-final,y-final).
+1. Input the line endpoints and store the left endpoint in (x-initial,y-initial) and right in (x-final,y-final).
     ```cpp
     printf("Enter The Starting Coordinate: ");
     scanf("%d %d", &Beginning.x, &Beginning.y);
     printf("Enter The Ending Cooardinate: ");
-    scanf("%d %d", &Ending.x, &Ending.y);
+    scanf("%d %d", &Ending.x, &Ending.y)
     ```
 2. Calculate the values for Differences in x and y. 
     ```cpp
@@ -40,7 +40,7 @@
     Increment.x=Difference.x/steps;
     Increment.y=Difference.y/steps;
     ```
-5. Set x to x-initial and y to y-initial and draw the pixel at coordinate (round(x),round(y))
+5. Set x-initial to x and y-initial to y and draw the pixel at the coordinate (round(x),round(y)).
     ```cpp
     Temp.x=Beginning.x, Temp.y=Beginning.y;
     putpixel(round(Temp.x),round(Temp.y),WHITE);;

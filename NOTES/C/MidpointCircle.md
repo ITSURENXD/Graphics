@@ -12,7 +12,7 @@
 
 &nbsp;
 ## 🤖 **Algorithm**
-1. Input the line endpoints and store the Centre and the Radius of the Circle:
+1. Input the Centre and the Radius of the Circle:
     ```cpp
     printf("Enter The Center Coordinate: ");
     scanf("%d %d", &Centre.x, &Centre.y);
@@ -24,7 +24,7 @@
     ```cpp
     int Parameter = 1 - Radius; 
     ```
-4. Set 0 to x-initial and Radius to y-initial and draw the pixel at symmetric Coordinates in the oxtants.
+4. Set x-initial to 0 and y-initial to radius and draw the pixel at symmetric Coordinates in the oxtants.
     ```cpp
     Temp.x = 0; Temp.y = Radius; 
     SymmetricPlot(Temp, Centre);  
@@ -52,7 +52,7 @@
     ```
 5. Repeat until either X or Y has reached equal values that is one octant is completed:
    - Calculate Parameter according to the value of the initial parameter.
-    - Set y to y<sub>k</sub> or y<sub>k</sub> - 1 according to the parameter where k is the step.
+    - Set y to $y_k$ or $y_k - 1$ according to the parameter where k is the step.
     - Draw the pixel at that coordinate.
     - For ($P_k<0$):&emsp; $\color{#1DACD6}P_{k+1} = P_{k} + 2x + 3$
     - For ($P_k>=0$) y--:&emsp; $\color{#1DACD6}P_{k+1} = P_{k} + 2x -2y + 5 $
@@ -73,6 +73,6 @@
 # 📤 Output
 - Ran using:
 ```powershell
-g++ MidpointCircle.cpp -o MidpointCirlce -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 ; ./MidpointCircle.exe
+g++ MidpointCircle.cpp -o MidpointCircle -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 ; ./MidpointCircle.exe
 ```
 <img src='./Resources/MidpointCircle.gif'>

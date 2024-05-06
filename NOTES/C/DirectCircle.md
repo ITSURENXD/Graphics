@@ -10,7 +10,7 @@
 
 &nbsp;
 ## 🤖 **Algorithm**
-1. Input the line endpoints and store the Centre and the Radius of the Circle:
+1. Input the Centre and the Radius of the Circle:
     ```cpp
     printf("Enter The Center Coordinate: ");
     scanf("%d %d", &Centre.x, &Centre.y);
@@ -22,7 +22,7 @@
     Temp.x=Centre.x+Radius;
     ```
 3. Repeat until x reaches Radius Distance opposite way from the X-coordinate of the centre of the circle.
-    - Calculate the y coordinate according to the formula: y = yc ± √(r^2-(x-xc)^2) individually.
+    - Calculate the y coordinate according to the formula: $y = y_c \pm \sqrt{ r^2 - (x-x_c)^2 }$ individually.
     - Draw the pixel at that coordinate.
     ```cpp
     for (; Temp.x>=Centre.x-Radius;Temp.x--) {
@@ -38,6 +38,6 @@
 # 📤 Output
 - Ran using:
 ```powershell
-g++ DirectCircle.cpp -o DirectCirlce -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 ; ./DirectCircle.exe
+g++ DirectCircle.cpp -o DirectCircle -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 ; ./DirectCircle.exe
 ```
 <img src='./Resources/DirectCircle.gif'>
