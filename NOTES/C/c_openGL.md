@@ -1,5 +1,5 @@
 # 🎮 OpenGL Implementation
-- The **[Code:📑](../C/OpenGL/test1.c)**
+- The **[Code:📑](../../C/OpenGL//FirstProgram.c)** (Test Program)
 
 &nbsp;
 
@@ -25,3 +25,10 @@
     ```bash
     gcc test1.c -o test1 -lGL -lGLU -lglut && ./test1
     ```
+
+# 🧰 Applications 🚧
+- OpenGL's use is demonstrated as
+1. [Drawing Points](./OpenGLPoints.md) 🚧
+2. [Drawing Lines](./OpenGLLines.md) 🚧
+3. [Drawing Polygons](./OpenGLPolygon.md) 🚧
+4. [Basic Lighting](./OpenGLBasicLighting.md) 🚧
