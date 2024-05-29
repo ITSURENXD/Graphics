@@ -46,7 +46,7 @@
         delay(15);
     }
     ```
-5. **REGION 1**: Repeat while Slope is greater than -1 (i.e $ 2r_y^2 x_k < 2r_x^2 y_k$) after which we can enter REGION 2.
+5. **REGION 1**: Repeat while Slope is greater than -1 (i.e $2r_y^2 x_k < 2r_x^2 y_k$) after which we can enter REGION 2.
     - Calculate Parameter according to the value of the initial parameter.
     - Set y to y<sub>k</sub> or y<sub>k</sub> - 1 according to the parameter where k is the step.
     - Draw the pixel at that coordinate. 
