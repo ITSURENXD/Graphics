@@ -180,11 +180,10 @@ void Menu(int *choice, int ParamSize,int MatrixA[MAXMATSIZE][MAXPARAMSIZE]) {
 
 int main()  {
     system("cls");
-    int MatrixA[MAXMATSIZE][MAXPARAMSIZE], MatrixB[MAXMATSIZE][MAXPARAMSIZE];
-    int ScalingVector[MAXMATSIZE]={1,1,3,0}, ShearVector[MAXMATSIZE]={1,2,3,0}, ParamSize;
+    int MatrixA[MAXMATSIZE][MAXPARAMSIZE], MatrixB[MAXMATSIZE][MAXPARAMSIZE], ParamSize;
     
     int choice=0; 
-     Polygon2dInputs(&ParamSize, MatrixA);
+    Polygon2dInputs(&ParamSize, MatrixA);
     do {
         Menu(&choice,ParamSize, MatrixA);
     } while (choice !=0);

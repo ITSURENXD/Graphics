@@ -70,7 +70,6 @@ void MidpointEllipse(Coordinates_Int Centre, Coordinates_Int Radii) {
         printf(" Plot (%d,%d)", Temp.x, Temp.y);
         SymmetricPlot(Temp,Centre);
     }
-    
 }
 
 int main() {

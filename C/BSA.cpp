@@ -5,7 +5,7 @@
 #include "./Modules/Graphics.cpp"
 
 void BSA(Coordinates_Int Beginning, Coordinates_Int Ending) {
-    Coordinates_Float Difference, Increment, Temp;
+    Coordinates_Int Difference, Temp;
     int parameter;
 
     // Setting Up The differences
@@ -23,12 +23,11 @@ void BSA(Coordinates_Int Beginning, Coordinates_Int Ending) {
         parameter=2*Difference.y-Difference.x; 
         
         while (Temp.x<Ending.x) {
+            Temp.x++;
             if(parameter<0) {
-                Temp.x++;
                 // Temp.y Remains the same
                 parameter=parameter+2*Difference.y;
             } else {
-                Temp.x++;
                 Temp.y++;
                 parameter=parameter+(2*Difference.y)-(2*Difference.x);
             }
@@ -39,13 +38,12 @@ void BSA(Coordinates_Int Beginning, Coordinates_Int Ending) {
     } else {
         parameter=2*Difference.x-Difference.y; 
         while (Temp.y<Ending.y) {
+            Temp.y++;
             if(parameter<0) {
-                Temp.y++;
                 // Temp.y Remains the same
                 parameter=parameter+2*Difference.x;
             } else {
                 Temp.x++;
-                Temp.y++;
                 parameter=parameter+(2*Difference.x)-(2*Difference.y);
             }
             printf("\n Putting pixel at ( %f , %f )", Temp.x, Temp.y);

@@ -2,11 +2,12 @@
 #include <graphics.h>
 #include <math.h>
 #include <stdlib.h>
-#include "./Modules/Graphics.cpp"
+#include "./Modules/Graphics.cpp" 
 
 void DDA(Coordinates_Int Beginning, Coordinates_Int Ending) {
-    Coordinates_Float Difference, Increment, Temp;
-    float steps;
+    Coordinates_Int Difference, Temp;
+    Coordinates_Float Increment;
+    int steps;
 
     // Setting Up The differences
     Difference.x = Ending.x - Beginning.x;
@@ -50,7 +51,7 @@ int main() {
     Coordinates_Int Beginning, Ending;
 
     //Gettting Inputs
-    printf("Enter The Starting Coordinate: ");
+    printf("Enter The Starting Coordinate : ");
     scanf("%d %d", &Beginning.x, &Beginning.y);
     printf("Enter The Ending Coordinate: ");
     scanf("%d %d", &Ending.x, &Ending.y);
