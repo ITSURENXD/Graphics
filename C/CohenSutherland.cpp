@@ -92,23 +92,21 @@ void CohenSutherlandClip(Coordinates_Int Window[2], Coordinates_Int Line[2]) {
     }
 }
 
-void InitialDrawing(Coordinates_Int Window[2], Coordinates_Int Lines[maxNoOfLines][2], int numberOfLines) {
-    rectangle(Window[0].x, Window[0].y, Window[1].x, Window[1].y);
-
-    setcolor(GREEN);
-    for (int i = 0; i < numberOfLines; i++) {
-        line(Lines[i][0].x, Lines[i][0].y, Lines[i][1].x, Lines[i][1].y);
-    }
-}
-
-void DrawingClippedLines(Coordinates_Int Window[2], Coordinates_Int Lines[maxNoOfLines][2], int numberOfLines) {
+void Drawing(Coordinates_Int Window[2], Coordinates_Int Lines[maxNoOfLines][2], int numberOfLines, int Mode) {
     setcolor(WHITE);
     rectangle(Window[0].x, Window[0].y, Window[1].x, Window[1].y);
 
     setcolor(GREEN);
-    for (int i = 0; i < numberOfLines; i++) {
-        CohenSutherlandClip(Window, Lines[i]);
+    if (!Mode) {
+        for (int i = 0; i < numberOfLines; i++) {
+            line(Lines[i][0].x, Lines[i][0].y, Lines[i][1].x, Lines[i][1].y);
+        }
+    } else {
+        for (int i = 0; i < numberOfLines; i++) {
+            CohenSutherlandClip(Window, Lines[i]);
+        }
     }
+    
 }
 
 void WindowInputs(Coordinates_Int Window[2]) {
@@ -143,11 +141,11 @@ int main() {
 
     graphicsinits();
 
-    InitialDrawing(Window, Lines, numberOfLines);
+    Drawing(Window, Lines, numberOfLines,0);
     getch();
     cleardevice();
     
-    DrawingClippedLines(Window, Lines, numberOfLines);
+    Drawing(Window, Lines, numberOfLines,1);
     getch();
     closegraph();
 }
