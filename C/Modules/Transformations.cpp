@@ -93,7 +93,7 @@ void CompositeMatrixMultiplicationFloat(int Size,int ParamSize, int MatrixA[MAXM
     int temp1[MAXMATSIZE][MAXPARAMSIZE],temp2[MAXMATSIZE][MAXPARAMSIZE];
     MatrixMultiplication(Size, ParamSize, MatrixC, MatrixD, temp1);
     printf("\n 1st Order Multiplication In FPR Composite: \n");
-    MatrixDisplay(3,4, temp1);
+    MatrixDisplay(3,4, temp1); 
     MatrixMultiplicationFloat(Size, ParamSize, MatrixB, temp1, temp2);
     printf("\n 2nd Order Multiplication In FPR Composite: \n");
     MatrixDisplay(3,4, temp2);
@@ -210,9 +210,9 @@ void ShearMatrixBuild(int Size, int Axis, int ShearVector[MAXMATSIZE], int Shear
         case 0: // x axis YZ Plane
             if (Size == 3) 
                 ShearnMatrix[0][1] = ShearVector[0];
-            else 
+            else {
                 ShearnMatrix[1][0] = ShearVector[1];
-                ShearnMatrix[2][0] = ShearVector[2];
+                ShearnMatrix[2][0] = ShearVector[2];}
             break;
         case 1: // y axis XZ Plane
             if (Size == 3) 
@@ -222,9 +222,9 @@ void ShearMatrixBuild(int Size, int Axis, int ShearVector[MAXMATSIZE], int Shear
                 ShearnMatrix[2][1] = ShearVector[2];
             break;
         case 2: // Z axis
-            if (Size != 3)
+            if (Size != 3) {
                 ShearnMatrix[0][2] = ShearVector[0];
-                ShearnMatrix[1][2] = ShearVector[1];
+                ShearnMatrix[1][2] = ShearVector[1]; }
             break;
         default:
             //inavlid axiss

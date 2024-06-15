@@ -59,8 +59,7 @@ void CohenSutherlandClip(Coordinates_Int Window[2], Coordinates_Int Line[2]) {
             // At least one endpoint is outside the clip rectangle; pick it.
             int outcodeOut = outcode0 ? outcode0 : outcode1;
 
-            // Now find the intersection point;
-            // using formulas y = y0 + slope * (x - x0), x = x0 + (1 / slope) * (y - y0)
+            // Now find the intersection point using formulas y = y0 + slope * (x - x0), x = x0 + (1 / slope) * (y - y0)
             if (outcodeOut & TOP) {           // point is above the clip rectangle
                 x = x0 + (x1 - x0) * (ymax - y0) / (y1 - y0);
                 y = ymax;
