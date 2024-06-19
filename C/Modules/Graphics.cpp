@@ -11,14 +11,12 @@
 
 #endif // TIME_WRAPPER_H
 
-typedef struct Coordinates_Integer {
-    int x;
-    int y;
+typedef struct {
+    int x, y;
 } Coordinates_Int;
 
-typedef struct Coordinates_Float {
-    float x;
-    float y;
+typedef struct {
+    float x, y;
 } Coordinates_Float;
 
 void graphicsinits() {
