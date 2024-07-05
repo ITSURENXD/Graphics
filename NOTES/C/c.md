@@ -4,6 +4,10 @@
 2. ### [OpenGL Library](./c_openGL.md) (incomplete):
 
 &nbsp;
+# ⬇️ Installation
+- Follow the direction from [Instllation Directions](./InstallWinBGIm.md)
+
+&nbsp;
 # 🧰 Applications
 1. ### **[Line Drawing Algorithms](./Line_Drawing_Algorithms.md)**
 2. ### **[Circle Drawing Algorithms](./Circle_Drawing_Algorithms.md)**
